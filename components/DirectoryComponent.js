@@ -27,6 +27,7 @@ class Directory extends Component {
                     leftAvatar={{ source: require('./images/react-lake.jpg')}}
                 />
             );
+            
         };
 
         return (
