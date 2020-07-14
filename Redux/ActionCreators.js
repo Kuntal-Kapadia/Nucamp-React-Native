@@ -159,7 +159,7 @@ export const addComment = comment => ({
 });
 
 export const postComment = (campsiteId, rating, author, text) => dispatch => {
-    
+    setTimeout(()=>{
     const newComment = {
         campsiteId: campsiteId,
         rating: rating,
@@ -192,4 +192,5 @@ export const postComment = (campsiteId, rating, author, text) => dispatch => {
             console.log('post comment', error.message);
             alert('Your comment could not be posted\nError: ' + error.message);
         });
+    },2000);
 };

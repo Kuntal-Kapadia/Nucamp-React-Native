@@ -98,15 +98,13 @@ class CampsiteInfo extends Component {
     }
     toggleModal() {
         this.setState({showModal: !this.state.showModal});
-        console.log("toggleModal");
     }
 
     handleComment(campsiteId){
-        console.log(JSON.stringify(this.state));
-        this.props.postComment(campsiteId, this.state.rating, this.state.author, this.state.text);
-        // this.toggleModal();
+        this.props.postComment(campsiteId.campsiteId, this.state.rating, this.state.author, this.state.text);
+        this.toggleModal();
     }
-
+ 
     resetForm(){
         console.log("resetForm");
         this.setState({
@@ -146,7 +144,7 @@ class CampsiteInfo extends Component {
                             <Rating
                                 type='star'
                                 ratingCount={5}
-                                startingValue={2}
+                                startingValue={5}
                                 imageSize={40}
                                 style={{paddingVertical: 10}}
                                 showRating
